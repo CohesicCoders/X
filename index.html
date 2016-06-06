@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ccApp">
 <head>
-  <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-	.ivcenter{
-		vertical-align: middle;
-		margin-top: -4px !important;
-	}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8">
 	
-  </style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./css/materialize.css">
+	<link href="./css/mainstyles.css" rel="stylesheet">
+	<title>CohesicCoders</title>
 </head>
-
-<body>
+<body ng-controller="mainController">
 	<div class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper blue darken-1">
@@ -34,113 +26,8 @@
 			</div>
 		</nav>
 	</div>
-	<div class="row">
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Hamburguesas</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-		<div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Comida Mexicana</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-		<div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Comida China</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-     </div>
-	<div class="row">
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Ensaladas</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-		<div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Comida Italiana</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-		<div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="http://www.lacocinadegisele.com/wp-content/uploads/2013/06/hamburguesa.jpg">
-              <span class="card-title">Cocina Oriental</span>
-            </div>
-            <div class="card-content">
-              <p>Aqui va la descripcion</p>
-            </div>
-            <div class="card-action right-align">
-              <a href="#" class="pink-text darken-1-text">VER</a>
-            </div>
-          </div>
-        </div>
-     </div>
-	<div class="row " >
-		<div class="col s12">
-			<hr class=" blue lighten-4" style="height:1px; ">
-		</div>
-	</div>
-	<div class="row " >
-		<div class="col s12 ">
-			<div class="purple white-text"  style="padding:15px;">
-				<h2>Contenido</h2>
-				<p>
-					Texto con contenido interesantisimo wow.......
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row " >
-		<div class="col s12">
-			<hr class=" blue lighten-4" style="height:1px; ">
-		</div>
+	<div class="main">
+		
 	</div>
 	<footer class="page-footer blue">
         <div class="container">
@@ -162,28 +49,29 @@
         </div>
         <div class="footer-copyright">
 			<div class="container">
-				© 2014 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+				© 2016 CohesicCoders
+				<!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+				<span class="grey-text text-lighten-4 right">Log: {{log}}</span>
 			</div>
         </div>
     </footer>
             
 	<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
-		<a class="btn-floating btn-large light-green accent-2 waves-effect waves-purple">
+		<a class="btn-floating btn-large light-green accent-2 waves-effect ">
 			<i class="large material-icons ">add</i>
 		</a>
 		<ul>
 			<li><a class="btn-floating red"><i class="material-icons">shopping_cart</i></a></li>
-			<li><a class="btn-floating yellow darken-1"><i class="material-icons">shopping_cart</i></a></li>
+			<li><a class="btn-floating yellow"><i class="material-icons">shopping_cart</i></a></li>
 		</ul>
 	</div>
 	<!--Import jQuery before materialize.js-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/materialize.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" ></script>
+	<script src="./js/app.js"></script>
 	<script>
 		$(".button-collapse").sideNav();
-		$('.fixed-action-btn').openFAB();
 	</script>
 </body>
 </html>
